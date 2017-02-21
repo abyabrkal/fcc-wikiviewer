@@ -1,0 +1,109 @@
+//style it
+*,
+*:before,*:after {
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: slategray;
+    background-image: #d9dde4
+
+}
+
+.container {
+    padding: 30px 100px;
+}
+
+.heading h1{
+    font-family: Sansita, sans-serif;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: #859ba5;
+    margin: 20px 0 100px 0;
+    padding: 0;
+    letter-spacing: 0.25em;
+    text-transform: capitalize;
+}
+
+.searchbox {
+    padding-bottom: 100px;
+}
+
+form {
+    width: 100%;
+    padding: 0px;
+    height: 60px;
+    display: flex;
+}
+
+input[type=text] {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: slategray;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid dodgerblue;
+    border-radius: 0;
+    padding: 0;
+    outline: none;
+    box-shadow: none;
+    vertical-align: middle;
+    border-bottom: 1px solid #DCDCDC;
+    width: auto;
+}
+
+input[type=text].sbox {
+    flex-grow: 3;
+    margin-right: 30px;
+    height: 60px;
+} 
+
+input[type=text].sbox: hover, 
+input[type=text].sbox: focus, {
+    border-bottom: 2px solid dodgerblue;
+} 
+
+
+.btn{
+    outline: none;
+    background-image: linear-gradient(90deg, #1D8FE1 0%, #1E90FF 100%);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 7px 0px rgba(77,77,77,0.75);
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.9em;
+    font-weight: 700;
+    
+}
+
+input[type=button].sbutton {
+    flex-grow: 1;
+    height: 40px;
+    margin-right: 40px;
+    align-self: flex-end;
+    font-size: 0.7em;    
+    
+} 
+
+input[type=button].slucky {
+    flex-grow: 2;
+    height: 40px;
+    font-size: 0.8em;
+    align-self: flex-end;
+} 
+
+
+.resultbox {
+    display: flex;
+}
+
+
