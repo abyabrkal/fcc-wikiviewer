@@ -11,7 +11,7 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     color: slategray;
-    background-image: #d9dde4
+    background-image: #d9dde4;
 
 }
 
@@ -19,16 +19,32 @@ body {
     padding: 30px 100px;
 }
 
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 100px 0;
+    padding: 0;
+}
+
 .heading h1{
     font-family: Sansita, sans-serif;
     font-weight: 700;
     font-size: 0.9em;
     color: #859ba5;
-    margin: 20px 0 100px 0;
-    padding: 0;
+
     letter-spacing: 0.25em;
     text-transform: capitalize;
 }
+
+a.shout {
+    align-self: center;
+}
+
+.fa-heart {
+    color: crimson;
+}
+
+
 
 .searchbox {
     padding-bottom: 100px;
