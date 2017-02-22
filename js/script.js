@@ -5,8 +5,23 @@ $(document).ready(function () {
     
     /**TESTING WATERS**/
     
-    $('#demo1').WikipediaWidget('Stuttgart');
-	$('#demo2').WikipediaWidget('Albert Einstein', {'showTitle': false, 'maxThumbnails': 6});
+    $('#demo1').Wikipedia('Stuttgart');
+	//$('#demo2').Wikipedia('Albert Einstein', {'showTitle': false, 'maxThumbnails': 6});
+    
+    $('#demo2').Wikipedia('Page Title', [{
+        'showTitle': true, 
+                                           
+        'maxThumbnails': 1, 
+                                           
+        'cutFirstInfoTableRows': 4, 
+        
+        'locale':'en',
+                                           
+                                           
+        'thumbMaxWidth': '180px', 
+                                           
+        'thumbMaxHeight': '180px' 
+                                         }]);
     
     
     
