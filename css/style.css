@@ -118,8 +118,29 @@ input[type=button].slucky {
 } 
 
 
-.resultbox {
+.resultbox,
+.item {
     display: flex;
+    justify-content: space-between;
 }
+
+
+.item-data-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    height: 250px;
+    width: 450px;
+    border: solid 1px salmon;
+}
+
+.item a {
+    background-color: crimson; 
+    border: solid 1px aquamarine; 
+    max-width: 175px;
+}
+
 
 
