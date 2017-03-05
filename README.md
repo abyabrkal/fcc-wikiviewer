@@ -1,2 +1,2 @@
 # fcc-wikiviewer
-WikiViewer - Free Code Camp FrontEND Project#6
+WikiViewer - Free Code Camp FRONTEND Project#5
