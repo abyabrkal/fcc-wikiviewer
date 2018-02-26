@@ -1,146 +1,313 @@
-//style it
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,500|Nunito|Lato|Signika|Inconsolata|Roboto|Roboto+Condensed|Open+Sans:800');
+
+
 *,
-*:before,*:after {
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-
 body {
-    min-height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    color: slategray;
-    background-image: #d9dde4;
-
+	font-family: 'Signika', 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: 500;
+	background-image: linear-gradient(to top, #25283D 0%, #1b1e2d 100%),
+		#FBFCFC;
+  width: 100%;
+	height: 100vh;
+	color: #25283D;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+/**********************************
+ HEADER DESIGN */
 
-.container {
-    padding: 30px 100px;
-}
-
-.heading {
+    
+heading {
+    background: #DDD;
+    margin: 20px;
+    padding: 100px 0;
+    z-index: 1;
+    position: relative;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
-    margin: 20px 0 100px 0;
-    padding: 0;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: translate3d(0,0,0);
 }
 
-.heading h1{
-    font-family: Sansita, sans-serif;
+.link {
+    outline: none;
+    text-decoration: none;
+    
+    position: relative;
+    font-size: 8em;
+    line-height: 1;
+    color: #9e9ba4;
+    display: inline-block;
+}
+
+a {
+    outline: none;
+    color: #dd3e62;
+    text-decoration: none;
+	  text-align:  center;
+}
+
+a:hover {
+    color: #1e1a1b;
+}
+
+ a:focus {
+    outline: none;
+ }
+
+.hidden {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+}
+/* Takiri */
+.wiki {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 0.9em;
-    color: #859ba5;
-
-    letter-spacing: 0.25em;
-    text-transform: capitalize;
+    font-size: 7em;
+    padding: 0 10px 20px;
+    -webkit-transition: color 0.5s;
+    transition: all 0.5s;
 }
 
-a.shout {
-    align-self: center;
+.wiki:hover {
+    color: #1e1a1b;     
+	  text-shadow: 8px 8px 18px rgba(0,0,0,0.15);
 }
 
-.fa-heart {
-    color: crimson;
+.wiki::before {
+    content: '';
+    position: absolute;
+    height: 56px;
+    width: 120%;
+    top: 50%;
+    margin-top: -18px;
+    left: -10%;
+    z-index: -1;
+    background: crimson;
+    -webkit-transform: scale3d(0,1,1);
+    transform: scale3d(0,1,1);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;      }
+
+.wiki:hover::before {
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
 }
 
+.wiki span {
+    font-size: 20%;
+    font-weight: 400;
+    position: absolute;
+    right: 15px;
+    color: #e53369;
+    bottom: 0;
+    opacity: 0;
+    
+    -webkit-transform: translate3d(-10px,-10px,0);
+    transform: translate3d(-10px,-10px,0);
+
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.wiki:hover span {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);}
+
+
+
+
+
+/**********************************/
 
 
 .searchbox {
-    padding-bottom: 100px;
+	white-space: nowrap;
+  position: absolute;
+	font-family: 'Inconsolata';
+	margin: 15px 35px;
+	
 }
 
-form {
-    width: 100%;
-    padding: 0px;
-    height: 60px;
-    display: flex;
-}
-
-input[type=text] {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    color: slategray;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid dodgerblue;
-    border-radius: 0;
-    padding: 0;
-    outline: none;
-    box-shadow: none;
-    vertical-align: middle;
-    border-bottom: 1px solid #DCDCDC;
-    width: auto;
-}
-
-input[type=text].sbox {
-    flex-grow: 3;
-    margin-right: 30px;
-    height: 60px;
-} 
-
-input[type=text].sbox: hover, 
-input[type=text].sbox: focus, {
-    border-bottom: 2px solid dodgerblue;
-} 
-
-
-.btn{
-    outline: none;
-    background-image: linear-gradient(90deg, #1D8FE1 0%, #1E90FF 100%);
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0px 0px 7px 0px rgba(77,77,77,0.75);
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    color: aliceblue;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-size: 0.9em;
-    font-weight: 700;
-    
-}
-
-input[type=button].sbutton {
-    flex-grow: 1;
-    height: 40px;
-    margin-right: 40px;
-    align-self: flex-end;
-    font-size: 0.7em;    
-    
-} 
-
-input[type=button].slucky {
-    flex-grow: 2;
-    height: 40px;
-    font-size: 0.8em;
-    align-self: flex-end;
-} 
-
-
-.resultbox,
-.item {
-    display: flex;
-    justify-content: space-between;
+.searchbox input#search{
+	margin: 0px;
+  width: 75%;
+  height: 60px;
+  background: #F7A79F;
+	padding: auto 10px;
+	border: 4px solid #982649;
+	border-radius: 7px;
+  font-size: 2.7em;
+  float: left;
+  color: #63717f;
+  padding-left: 5px;
+  border-radius: 4px;
+	box-shadow: 0px 31px 35px 0px rgba(0, 0, 0, 0.38);
+	vertical-align: middle;
+	transition: all 0.3s ease-in;
 }
 
 
-.item-data-row {
-    display: flex;
-    flex-direction: column;
+#search:hover,
+#search:active,
+#search:focus {
+	width: 100%;
+	outline: none;
+	border: 8px solid crimson;
 }
 
-.item {
-    height: 250px;
-    width: 450px;
-    border: solid 1px salmon;
-}
-
-.item a {
-    background-color: crimson; 
-    border: solid 1px aquamarine; 
-    max-width: 175px;
+.searchbox input#search::-webkit-input-placeholder {
+	color: #181A27;
 }
 
 
+#searchBtn {
+	border: none;
+	background-color: crimson; /*#982649*/
+  
+	padding: 7px;
+	width: 60px;
+	height: 60px;
+	font-size: 1.25em;
+	transition: all 320ms ease-out;
+	border-radius: 4px;
+	box-shadow: 0px 31px 35px 0px rgba(0, 0, 0, 0.38);
+	color: white;
+}
 
+#searchBtn:hover {
+	box-shadow: 8px 8px 18px rgba(0,0,0,0.15);
+	transform: scale(0.9);
+}
+
+#searchBtn:focus {
+	outline: none;
+}
+
+#randomBtn {
+	border: none;
+	background-color: crimson;
+	margin: auto 20px;
+	padding: 7px;
+	width: 170px;
+	height: 60px;
+	font-size: 1.25em;
+	color: white;
+	border-radius: 4px;
+	box-shadow: 0px 31px 35px 0px rgba(0, 0, 0, 0.38);
+	transition: all 320ms ease-out;
+}
+
+#randomBtn:click {
+	box-shadow: 8px 8px 18px rgba(0,0,0,0.15);
+	transform: scale(0.9);
+}
+
+#randomBtn:focus {
+	outline: none;
+}
+
+.container{
+	margin: 15px;
+	margin-top: 100px;
+	font-size: 1em;
+	width: 100%;
+}
+
+#results {
+	padding: 7px;
+	display: flex;
+	flex-direction: row;	
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.list{
+   width: 970px;
+   height: 250px;
+   position: relative;
+   color: white;
+   font-size: 2em;
+ 	 padding: 12px 12px 20px 12px !important;
+	 margin: 20px;
+}
+
+.left{
+   width: 60px;
+   height: 60px;
+   left: 10px; 
+   top: 25%;
+   position: absolute;
+   background-color: #E93E7D;
+   z-index: 100 !important;
+   /*box-shadow: -7px 9px 25px 0px rgba(26,26,26,0.57);*/
+	 box-shadow: 0px 16px 30px 0px rgba(0, 0, 0, 0.53);
+	 padding-right:16px;
+	 border-radius: 3px;
+	 font-size: 2.8em;
+	 font-weight: 700;
+	 overflow: hidden;
+}
+
+.right{
+   width: 900px;
+   height: 250px;
+   position: absolute;
+   /*background-color: #2E2744;*/
+	 background-image: linear-gradient(159deg, #47455d 0%, #323045 97%);
+   left: 40px; 
+   top: 0px;
+   z-index: -1 !important;
+   /*box-shadow: -7px 9px 25px 0px rgba(26,26,26,0.57);*/
+	 box-shadow: 0px 31px 35px 0px rgba(0, 0, 0, 0.38);
+   padding: 10px 10px 20px 60px;
+	 overflow:hidden;
+	 border-radius: 3px;
+}
+
+a.mainhead {
+	font-size: 1.8em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	color: #DC143C;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 0px 14px 40px #000000;
+	z-index: 10;
+}
+
+a:hover,
+a:link,
+a:visited {
+	cursor: pointer;
+}
+
+
+a:visited{
+	color: #4527A0;
+}
+
+.brief {
+	margin-top: 20px;
+	margin-right: 20px;
+	padding-bottom: 10px;
+	font-size: 0.8em;
+	line-height:1.5;
+	letter-spacing: 1.1px;
+	overflow: inherit;
+  color: #9A9D9B;
+	
+}
